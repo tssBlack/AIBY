@@ -1,0 +1,468 @@
+html[lang="de"] *, html[lang="fr"] *, html[lang="pt"] * {
+  letter-spacing: 0;
+}
+    html[lang="de"] .access-container {
+        font-size:0.95rem;
+    }
+
+* {
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.05rem;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+    max-width: 100vh;
+    max-height: 100vw;
+}
+
+.container {
+    display: flex;
+    background-image: url('./assets/images/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    padding:0.5rem 1.5rem;
+}
+
+
+/* styles for header */
+.header {
+    padding: 0.75rem 0;
+}
+
+.navbar {
+    color:#fff;
+    display: flex;
+    justify-content: space-between;
+    padding-left:0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.time {
+    font-family: sfProMedium;
+}
+.status-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .status-icons img {
+        padding: 0.2rem;
+    }
+
+.cross-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.cross {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+}
+
+
+/* styles for main  */
+.main {
+    flex: 1 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-family: sfProBold;
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.img-container {
+    display: flex;
+    justify-content: space-around;
+    color:#fff;
+    font-family: sfProLight;
+    margin-bottom:2rem;
+}
+
+.img-slot {
+    position: relative;
+    width: calc(100% / 3);
+    overflow: hidden;
+    padding: 0 0.2rem;
+}
+    .img-slot img {
+        border-radius: 20px;
+        width: 100%;
+        height: 150px;
+        display: block;
+        object-fit: cover;
+    }
+    .img-slot::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 20px;
+        pointer-events: none;
+        background: linear-gradient(
+            to top,
+            #15072F 0%,
+            rgba(6, 9, 37, 0.558) 30%,
+            rgba(4, 6, 26, 0) 60%,
+            rgba(0, 0, 0, 0) 100%
+        );
+        z-index: 1;
+    }
+    .img-slot span {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 0.75rem 0.5rem;
+        font-size: 0.75rem;
+        text-align: left;
+        line-height: 1.2;
+        z-index: 2;
+    }
+    .img-slot:first-child {
+        padding-left:0;
+    }
+    .img-slot:last-child {
+        padding-right: 0;
+    }
+
+.access-container {
+    width: 100%;
+}
+
+.offers {
+    margin-bottom: 1rem;
+}
+
+.info-title {
+    color:#fff;
+    font-family: sfProRegular;
+}
+
+.best-offer {
+    position: relative;
+    border: 0;
+    background-color: rgba(255, 255, 255, .7);
+}
+    .best-offer::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 50px;
+        padding: 1px;
+        background: linear-gradient(184deg, 
+            rgba(255, 255, 255, 0.1016) 0,
+            rgba(253, 148, 244, 0) 5%,
+            rgb(253, 148, 244, 1) 18%,
+            rgba(253, 148, 244, 0) 20% 
+            ),
+            linear-gradient(200deg, 
+            rgba(255, 255, 255, 0.1016) 0,
+            rgba(1, 180, 255, 1) 10%,
+            rgba(1, 180, 255, 0.0001) 15%,
+            rgba(253, 148, 244, 0) 35% 
+            );
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: exclude;
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask-composite: exclude; 
+    }
+    .best-offer.active::before {
+        background: none;
+        padding: 0;
+    }
+.badge {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    top: -0.75rem;
+    right: 1.25rem;
+    padding: 0.25rem 0.75rem;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0px 1px 6px 0px #0000007E;
+    background: linear-gradient(90deg, #BC1FEF 0%, #0035FF 100%);
+    z-index: 2;
+}
+    .badge::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 50px;
+        padding: 1.1px;
+        background: linear-gradient(270deg, #00B5FF 0%, #632AF7 53.01%, #FF96F4 100%);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: exclude;
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask-composite: exclude; 
+    }
+    .badge.active {
+        box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.4959);
+        background: #ffffff;
+        color: #141131;
+    }
+    .badge.active::before {
+        padding:0;
+    }
+
+.offer {
+    background: #FFFFFF1A;
+    backdrop-filter: blur(10.873126983642578px)
+
+}
+    .offer.active {
+        border: 1px solid #ffffff;
+        background: #FFFFFF4D;
+        backdrop-filter: blur(10.873126983642578px)
+    }
+
+.btns {
+    border: 1px solid transparent;
+    border-radius:2rem;
+    padding:0.75rem;
+    margin:0.5rem 0;
+}
+
+.offer-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.75rem 0 1rem;
+    color:#ffffffb3;
+}
+
+.price-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: sfProLight;
+    text-align: left;
+}
+.priceChanger {
+    visibility: hidden;
+}
+
+.btn-continue {
+    font-family: sfProMedium;
+    font-size: 20px;
+    background-color: #fff;
+    line-height: 24px;
+    padding: 1rem 2rem;
+}
+    .btn-continue > a {
+        color: #070B33;
+        text-decoration: none;
+    }
+
+/* styles for footer */
+.footer-toolbar {
+    font-family: 'sfProRegular';
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+    font-size: 0.75rem;
+}
+
+.footer-toolbar a {
+    text-decoration: underline;
+    color: #ffffff4d;
+}
+
+.homebar {
+    border-radius: 25px;
+    background-color: #fff;
+    width: calc(100% / 3);
+    margin:0 auto;
+    height: 5px;
+}
+
+/* iPhone 12 Pro */
+@media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+    .navbar-8 {
+        display: none;
+    }
+}
+
+/* iPhone X */
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+    .navbar-8 {
+        display: none;
+    }
+}
+
+/* iPhone SE (1-gen), iPhone 8 */
+@media only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) {
+    .container {
+        padding: 0.25rem 0 0.5rem 0;
+        background-position: 0 -2rem;
+    }
+    /* header */
+    .header {
+        padding: 0;
+        font-size: 0.75rem;
+    }
+    .navbar-12 {
+        display: none;
+    }
+    .navbar-8 {
+        font-family: sfProLight;
+        padding: 0 0.25rem;
+        margin-bottom:1.25rem;
+    }
+        .navbar-8 div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 15px;
+        }
+        .navbar-8 span {
+            font-size: 0.75rem;
+        }
+    .time {
+        font-family: sfProLight;
+    }
+    .cross-container {
+        padding: 0 1rem;
+    }
+    .cross {
+        font-size: 1.25rem;
+    }
+    .status-icons img {
+        padding: 0 0.2rem;
+    }
+    /* main */
+    .main {
+        margin-bottom: 1.5rem;
+        padding:0 1.5rem;
+    }
+    .title {
+        margin-bottom: 0.75rem;
+    }
+    .offers {
+        margin-bottom: 0;
+    }
+    .img-container {
+        margin-bottom: 1rem;
+    }
+    /* footer */
+    .footer {
+        padding: 0 1.5rem;
+    }
+    .homebar {
+        display: none;
+    }
+    .footer-toolbar {
+        margin-bottom: 0;
+    }
+}
+
+/* iPhone 8 Plus */
+@media only screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
+  .container {
+        padding: 0.25rem 0 0.5rem 0;
+        background-position: 0 -2rem;
+    }
+    /* header */
+    .header {
+        padding: 0;
+        font-size: 0.75rem;
+    }
+    .navbar-12 {
+        display: none;
+    }
+    .navbar-8 {
+        font-family: sfProLight;
+        padding: 0 0.25rem;
+        margin-bottom:1.25rem;
+    }
+        .navbar-8 div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 15px;
+        }
+        .navbar-8 span {
+            font-size: 0.75rem;
+        }
+    .time {
+        font-family: sfProLight;
+    }
+    .cross-container {
+        padding: 0 1rem;
+    }
+    .cross {
+        font-size: 1.25rem;
+    }
+    .status-icons img {
+        padding: 0 0.2rem;
+    }
+    /* main */
+    .main {
+        margin-bottom: 1.5rem;
+        padding:0 1.5rem;
+    }
+    .title {
+        margin-bottom: 0.75rem;
+    }
+    .offers {
+        margin-bottom: 0;
+    }
+    .img-container {
+        margin-bottom: 1rem;
+    }
+    /* footer */
+    .footer {
+        padding: 0 1.5rem;
+    }
+    .homebar {
+        display: none;
+    }
+    .footer-toolbar {
+        margin-bottom: 0;
+    }
+}
+
+/* font-faces */
+@font-face {
+  font-family: sfProBold;
+  src:url("/assets/fonts/SF-Pro-Display-Bold.otf");
+}
+
+@font-face {
+    font-family: sfProMedium;
+    src: url("/assets/fonts/SF-Pro-Display-Medium.otf");
+}
+
+@font-face {
+    font-family: sfProLight;
+    src: url("/assets/fonts/SF-Pro-Display-Light.otf");
+}
+
+@font-face {
+    font-family: sfProRegular;
+    src: url("/assets/fonts/SF-Pro-Display-Regular.otf");
+}
