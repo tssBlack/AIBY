@@ -10,7 +10,7 @@ export default function queryLang() {
             return await response.json();
         } catch {
             console.warn('Lang file not found');
-            const response = await fetch('../assets/lang/en.json');
+            const response = await fetch('./assets/lang/en.json');
             return await response.json();
         }
     }
