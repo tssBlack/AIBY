@@ -304,6 +304,9 @@ body {
     .navbar-8 {
         display: none;
     }
+    .navbar-12 {
+        display: flex;
+    }
 }
 
 
