@@ -273,10 +273,11 @@ body {
     line-height: 24px;
     padding: 1rem 2rem;
 }
-    .btn-continue > a {
-        color: #070B33;
-        text-decoration: none;
-    }
+
+.continue-href {
+    color: #070B33;
+    text-decoration: none;
+}
 
 /* styles for footer */
 .footer-toolbar {
