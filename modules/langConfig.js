@@ -3,7 +3,7 @@ import getLangFromURL from './getLangFromURL.js';
 
 let currentLang = getLangFromURL() || startLang();
 document.documentElement.lang = currentLang;
-const langFile = `../assets/lang/${currentLang}.json`;
+const langFile = `./assets/lang/${currentLang}.json`;
 
 // #?lang
 window.addEventListener('hashchange', () => {
