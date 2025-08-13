@@ -300,8 +300,7 @@ body {
     height: 5px;
 }
 /* iPhone X 12*/
-@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3),
-       only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+@media (min-width: 375px) and (max-width: 390px) and (orientation: portrait) {
     .navbar-8 {
         display: none;
     }
