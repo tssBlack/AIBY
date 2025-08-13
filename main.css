@@ -449,20 +449,20 @@ body {
 /* font-faces */
 @font-face {
   font-family: sfProBold;
-  src:url("/assets/fonts/SF-Pro-Display-Bold.otf");
+  src:url("assets/fonts/SF-Pro-Display-Bold.otf");
 }
 
 @font-face {
     font-family: sfProMedium;
-    src: url("/assets/fonts/SF-Pro-Display-Medium.otf");
+    src: url("assets/fonts/SF-Pro-Display-Medium.otf");
 }
 
 @font-face {
     font-family: sfProLight;
-    src: url("/assets/fonts/SF-Pro-Display-Light.otf");
+    src: url("assets/fonts/SF-Pro-Display-Light.otf");
 }
 
 @font-face {
     font-family: sfProRegular;
-    src: url("/assets/fonts/SF-Pro-Display-Regular.otf");
+    src: url("assets/fonts/SF-Pro-Display-Regular.otf");
 }
