@@ -299,23 +299,21 @@ body {
     margin:0 auto;
     height: 5px;
 }
-
-/* iPhone 12 Pro */
-@media (max-width: 768px) {
+/* iPhone X 12*/
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3),
+       only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
     .navbar-8 {
         display: none;
     }
 }
 
-/* iPhone X */
-@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-    .navbar-8 {
-        display: none;
-    }
-}
+
 
 /* iPhone SE (1-gen), iPhone 8 */
-@media only screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) {
+@media only screen 
+  and (device-width: 375px) 
+  and (device-height: 667px) 
+  and (-webkit-device-pixel-ratio: 2) {
     .container {
         padding: 0.25rem 0 0.5rem 0;
         background-position: 0 -2rem;
@@ -381,7 +379,10 @@ body {
 }
 
 /* iPhone 8 Plus */
-@media only screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) {
+@media only screen 
+  and (device-width: 414px) 
+  and (device-height: 736px) 
+  and (-webkit-device-pixel-ratio: 3) {
   .container {
         padding: 0.25rem 0 0.5rem 0;
         background-position: 0 -2rem;
